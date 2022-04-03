@@ -1,0 +1,204 @@
+:root {
+    --color-amarillo: #EAC926;
+    --color-azul: #03264C;
+    --color-celeste: #1259c3;
+    --color-grisOscuro: #666;
+    --color-grisClaro: #ebebeb;
+    --color-verde: #39b54a;
+    /* FUNTES */
+    --font-roboto: 'Roboto', sans-serif;
+    /* Tamaños de fuentes */
+    --paragraph: 12px;
+    --title: 24px;
+    --prices: 18px;
+    --discounts-descriptions: 16px;
+}
+
+/* --------------------------------- */
+/*         ESTILOS GENERALES         */
+/* --------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--font-roboto);
+    background: var(--color-grisClaro);
+}
+
+li {
+    list-style: none;
+}
+
+/* --------------------------------- */
+/*          ESTILOS HEADER           */
+/* --------------------------------- */
+header {
+    background-color: var(--color-amarillo);
+    font-size: var(--paragraph);
+    padding:  30px 0 10px;
+
+}
+
+header .burger-menu {
+    background-color: var(--color-celeste);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    width: 35px;
+    padding: 7px;
+    font-size: 17px;
+    margin: 30px auto 10px;
+}
+
+header img#logo {
+    width: 130px;
+    margin-left: 25px;
+}
+
+header .busqueda{
+    margin-left: 25px;  
+}
+
+header p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header nav .menu-top {
+    margin-bottom: 20px;
+    display: none;
+}
+
+header nav .menu-buttom {
+    display: none;
+}
+
+/*     BANNER      */
+
+body img.banner {
+    width: 100%;
+}
+
+/*       MAIN CONT       */
+
+main.main-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main.main-container section h3 {
+    font-size: var(--title);
+    margin: 20px 0;
+}
+
+main.main-container article.product {
+    margin: 20px 0;
+}
+
+main.main-container article div {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    background: white;
+    border: none;
+}
+
+main.main-container article .fa-truck {
+    border-radius: 50%;
+    padding: 8px;
+    border: 1px solid var(--color-verde);
+    color: var(--color-verde);
+}
+
+main.main-container article div p {
+    font-size: var(--prices);
+    font-weight: 600;
+}
+
+main.main-container article .discount {
+    color: var(--color-verde);
+    margin-bottom: 15px;
+    font-size: var(--discounts-descriptions);
+    font-weight: 500;
+}
+
+/* --------------------------------- */
+/*          ESTILOS FOOTER           */
+/* --------------------------------- */
+
+footer {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background: white;
+    border: 4px solid #ebebeb;
+}
+
+footer article {
+    margin-bottom: 25px;
+}
+
+footer article p {
+    font-size: var(--paragraph);
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer article h4 {
+    font-size: 15px;
+}
+
+footer article i {
+    color: var(--color-celeste);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+footer p#copyright {
+    font-size: var(--paragraph);
+    color: var(--color-grisOscuro);
+    text-align: left;
+    padding-left: 10px;
+}
+
+@media screen and (min-width: 361px) {
+    
+    header .burger-menu {
+        background-color: var(--color-celeste);
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        width: 35px;
+        padding: 7px;
+        font-size: 17px;
+        margin: 30px auto 10px;
+        display: none;
+    } 
+    
+    header nav .menu-top {
+        display: block;
+        padding-left: 10px;
+        margin-bottom: 0;
+    }
+    
+    header nav .menu-buttom {
+        display: block;
+        padding-left: 10px;
+    }
+    
+    /*       MAIN CONT       */
+    
+    main.main-container article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        margin-bottom: 5px;
+    }
+}
