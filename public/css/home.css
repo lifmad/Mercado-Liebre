@@ -58,13 +58,44 @@ header .burger-menu {
     margin: 30px auto 10px;
 }
 
-header img#logo {
-    width: 130px;
-    margin-left: 25px;
+header .logo_search {
+    display: flex;
+    padding: 0 20px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header .logo_search a {
+    width: 50%;
+}
+
+header img {
+    width: 100%;
+    max-width: 150px;
 }
 
 header .busqueda{
-    margin-left: 25px;  
+    height: 30px;
+    padding: 0 5px;
+    background-color: white;
+    display: flex;
+    width: 50%;
+    position: relative;
+    border-radius: 5px;
+}
+
+header .busqueda input {
+    width: 100%;
+    border: none;
+}
+
+header .busqueda .fa-search {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    top: 10px;
+    font-size: 18px;
 }
 
 header p {
@@ -87,10 +118,9 @@ header nav .menu-buttom {
 
 /*     BANNER      */
 
-main img.banner {
+img.banner {
     display: none;
-    width: 120%;
-    margin-left: -10%;
+    width: 100%;
 }
 
 main.main-container {
@@ -104,16 +134,15 @@ main.main-container section h3 {
 }
 
 main.main-container article.product {
-    margin: 20px 0;
-}
-
-main.main-container article {
     background: white;
+    max-width: 320px;
+    margin: 20px auto 0;
 }
 
-main.main-container article div {
+main.main-container article .description {
     border-top: 1px solid #ebebeb;
     padding: 15px;
+    position: relative;
 }
 
 main.main-container article .fa-truck {
@@ -121,18 +150,33 @@ main.main-container article .fa-truck {
     padding: 8px;
     border: 1px solid var(--color-verde);
     color: var(--color-verde);
+    position: absolute;
+    right: 20px;
+    top: -17px;
+}
+
+main.main-container article div .price_discount {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
 }
 
 main.main-container article div p {
     font-size: var(--prices);
     font-weight: 600;
+    width: 35%;
+    display: inline-block;
+    
 }
 
 main.main-container article .discount {
     color: var(--color-verde);
-    margin-bottom: 15px;
     font-size: var(--discounts-descriptions);
     font-weight: 500;
+    display: inline-block;
+    width: 65%;
+    margin-left: 20px;
 }
 
 /* --------------------------------- */
@@ -174,11 +218,8 @@ footer section#copyright {
     padding-left: 10px;
 }
 
-@media screen and (min-width: 361px) {
+@media screen and (min-width: 580px) {
 
-    main img.banner {
-        display: block;
-    }
     
     header .burger-menu {
         background-color: var(--color-celeste);
@@ -192,21 +233,55 @@ footer section#copyright {
         display: none;
     } 
     
-    header nav .menu-top {
+    img.banner {
         display: block;
-        padding-left: 10px;
+    }
+
+    header .nav_menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav .menu-top {
+        display: flex;
+        padding: 0 10px;
+        gap: 10px;
         margin-bottom: 0;
     }
     
     header nav .menu-buttom {
-        display: block;
-        padding-left: 10px;
+        display: flex;
+        padding: 0 10px;
+        gap: 10px;
+        margin-bottom: 0;
     }
     
     /*       MAIN CONT       */
-    
+
+    main.main-container .container_product {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+
     main.main-container article {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         margin-bottom: 5px;
+        width: 48%;
     }
+}
+
+@media screen and (min-width:860px) {
+    
+    main.main-container .container_product {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+
+    main.main-container article {
+        width: 100%;
+    }
+    
+
 }
