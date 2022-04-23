@@ -1,0 +1,81 @@
+body.body_login {
+    background-color: white;
+}
+
+main.main_login {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+main .login_form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+main .login_form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main .login_form .user_data {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+main .login_form .get_log {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    background-color: #cecece;
+    border: none;
+    max-width: 320px;
+}
+
+main .login_form .get_log:focus {
+    outline: none;
+}
+
+main .login_form .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+main .login_form .buttons a {
+    width: 100%;
+    background-color: rgb(27, 27, 143);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: white;
+    max-width: 320px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main .login_form .remember {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*   ----MEDIA QUERIES 480PX------   */
+
+@media screen and (min-width:480px) {
+    
+    main.main_login {
+        margin-top: 40px;
+    }
+    
+    main .login_form {
+        max-width: 450px;
+        box-shadow: 0 0 10px rgb(100, 100, 100);
+        padding: 20px 0 100px;
+        border-radius: 5px;
+    }
+}

@@ -1,3 +1,6 @@
+@import url('/css/login.css');
+@import url('/css/register.css');
+
 :root {
     --color-amarillo: #EAC926;
     --color-azul: #03264C;
@@ -72,7 +75,7 @@ header .logo_search a {
 
 header img {
     width: 100%;
-    max-width: 150px;
+    max-width: 300px;
 }
 
 header .busqueda{
@@ -94,11 +97,11 @@ header .busqueda .fa-search {
     position: absolute;
     right: 10px;
     cursor: pointer;
-    top: 10px;
+    top: 6px;
     font-size: 18px;
 }
 
-header p {
+header .purchase_options {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
@@ -235,6 +238,30 @@ footer section#copyright {
     
     img.banner {
         display: block;
+    }
+
+    header .header_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        
+    }
+
+    header .logo_search {
+        display: flex;
+        justify-content: space-evenly;
+        width: 70%;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    header .purchase_options {
+        display: inline;
+        text-align: end;
+        width: 30%;
+        margin: 0;
+        margin-right: 20px;
     }
 
     header .nav_menu {
